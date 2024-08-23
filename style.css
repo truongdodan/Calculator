@@ -1,0 +1,50 @@
+.body {
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid black;
+    margin: 40px auto;
+    
+    
+}
+
+.calculator-buttons {
+    /* padding: 10%; */
+}
+
+.number-and-others{
+    display: flex;
+    
+}
+
+.calculator button {
+    width: 50px;
+    height: 40px;
+
+}
+
+.number-and-dot {
+    display: flex;
+    flex-direction: column;
+}
+
+.others {
+    display: flex;
+    flex-direction: column;
+}
+
+.display {
+    border: 1px solid pink;
+    margin: 5px;
+    height: 35px;
+}
+
+#dot {
+    margin: auto;
+}
