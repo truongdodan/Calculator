@@ -16,6 +16,7 @@
 
 .calculator-buttons {
     /* padding: 10%; */
+    margin: 10px;
 }
 
 .number-and-others{
@@ -39,9 +40,10 @@
     flex-direction: column;
 }
 
-.display {
+#display {
     border: 1px solid pink;
     margin: 5px;
-    height: 35px;
+    padding: 5px;
+    height: 40px;
 }
 

@@ -27,3 +27,36 @@ function doMath(num1, num2, expression) {
     }
 }
 
+//Show the charactor on the monitor
+const btns = document.querySelectorAll("button")
+const display = document.querySelector("#display")
+const sp = document.querySelector("#space")
+const cl = document.querySelector("#clear")
+
+// btn.addEventListener("click", function () {
+//     display.textContent = btn.textContent;
+// })
+
+sp.addEventListener("click", function() {
+    let text = display.textContent
+    display.textContent = text.slice(0, -1)
+})
+
+cl.addEventListener("click", function() {
+    display.textContent = ''
+})
+
+btns.forEach(btn => {
+    if(btn.id == "space" || btn.id == "clear" || btn.id == "equal") {}
+    else {
+        btn.addEventListener("click", function() {
+            display.textContent += btn.textContent;
+        })
+    }
+})
+
+
+
+
+
+
