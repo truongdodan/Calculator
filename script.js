@@ -110,10 +110,7 @@ function calculate(str) {
             break
         }
     }
-    if(exprIndex === undefined) {
-        //console.log(true);
-        return
-    }
+    if(exprIndex === undefined) return
     //////Find the seperate pair of number, then correct them if there's any exessive negative or positive before it
     num1 = str.slice(0, exprIndex)
     num2 = str.slice(exprIndex + 1, str.length)
@@ -123,21 +120,6 @@ function calculate(str) {
     num2 = correctNumber(num2)
 
     doMath(Number(num1), Number(num2), expr)
-    //console.log(num1+expr+num2);
-
-    /* if(!str.includes('+') && !str.includes('-') && !str.includes('*') && !str.includes('/')) {
-        return
-    }
-
-    let num1, num2, expr = '', exprIndex
-    let num1StartPos = -1, num2EndPos = -1
-    let length = str.length
-    for(let i = 0; i < length; i++) {
-
-    } */
-
-
-
 }
 
 //return true if there is a pair of number, ready for calculate
@@ -168,6 +150,7 @@ function hasAPairOfNumber(str) {
 }
 
 function contentChanged() {
+    display.scrollLeft = display.scrollWidth
     /*
     This whole thing is to restrict to one pair to operate at a time 
     meaning that when user try to add the 3th number to calculate, the calculator 
@@ -198,6 +181,5 @@ equal.addEventListener("click", () => {
     calculate(display.textContent) 
     display.textContent = result.toString()
 })
-
 
 
